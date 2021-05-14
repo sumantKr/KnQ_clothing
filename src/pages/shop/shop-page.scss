@@ -2,5 +2,7 @@
     height: max-content;
     width:90vw;
     margin: auto;
-    overflow-x: hidden;
+    @media (max-width:768px){
+        margin-left:-6vh
+    }
 }
