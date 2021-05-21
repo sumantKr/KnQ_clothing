@@ -1,7 +1,8 @@
 import React from 'react';
 import './sign-in.scss'
-import {FormInput} from '../form_input/form_input.component.jsx'
-import {CustomButton} from '../custom-button/CustomBottom.component.jsx'
+import { signInWithGoogle } from '../../firebase/firebase.utils.js'
+import { FormInput } from '../form_input/form_input.component.jsx'
+import { CustomButton } from '../custom-button/CustomBottom.component.jsx'
 export class SignIn extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +11,7 @@ export class SignIn extends React.Component {
             password: ''
         }
     }
-    handleChange=(event) => {
+    handleChange = (event) => {
         const { value, name } = event.target;
         this.setState({ [name]: value })
     }
@@ -40,7 +41,10 @@ export class SignIn extends React.Component {
                         handleChange={this.handleChange}
                         label="password"
                         required />
-                    <CustomButton  type="submit" value="Submit Form" >Sign In</CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit" value="Submit Form" >Sign In</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} value="Submit Form" isGoogleSignIn >Sign in with Google</CustomButton>
+                    </div>
                 </form>
             </div>
         )
