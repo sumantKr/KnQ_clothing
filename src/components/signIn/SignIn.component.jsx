@@ -43,7 +43,7 @@ export class SignIn extends React.Component {
                         required />
                     <div className="buttons">
                         <CustomButton type="submit" value="Submit Form" >Sign In</CustomButton>
-                        <CustomButton onClick={signInWithGoogle} value="Submit Form" isGoogleSignIn >Sign in with Google</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} value="Submit Form" isGoogleSignIn >Google Sign In</CustomButton>
                     </div>
                 </form>
             </div>
