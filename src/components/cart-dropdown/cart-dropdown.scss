@@ -1,4 +1,4 @@
-.cart-dropdown{
+.cart-dropdown {
     position: absolute;
     width: 240px;
     height: 340px;
@@ -7,16 +7,22 @@
     padding: 20px;
     border: 1px solid black;
     background-color: white;
-    top: 80px;
-    right: 20px;
+    top: 90px;
+    right: 40px;
     z-index: 5;
-    .card-items{
+    
+    .cart-items {
         height: 240px;
-        display:flex;
+        display: flex;
         flex-direction: column;
         overflow: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
-    button{
-        margin-top: auto;
+  
+    button {
+      margin-top: auto;
     }
-}
+  }
+  
