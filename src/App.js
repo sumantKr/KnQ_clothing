@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.scss';
 import { connect } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.action'
@@ -6,8 +7,8 @@ import { Route, Switch,Redirect } from 'react-router-dom';
 import { HomePage } from './pages/HomePage/Homepage.component.jsx'
 import ShopPage from './pages/shop/shop.component.jsx'
 import Header from './components/header/header.component.jsx'
+import CheckoutPage from './pages/checkout/checkout.component.jsx'
 import { SignInAndSignUp } from './pages/signInAndSignUp/signInAndSignUp.component.jsx'
-import React from 'react';
 class App extends React.Component {
 
   unsubscribeFromAuth = null;
@@ -32,9 +33,11 @@ class App extends React.Component {
   render() {
     return <div className="App">
       <Header />
+
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route  path='/shop' component={ShopPage} />
+        <Route   path='/shop' component={ShopPage} />
+        <Route  exact path='/checkout' component={CheckoutPage} />
         <Route exact path='/signin' 
         render={()=>
           this.props.currentUser ?
@@ -42,7 +45,7 @@ class App extends React.Component {
             :
             <SignInAndSignUp/>
           }/>
-
+          
       </Switch>
     </div>
   };
