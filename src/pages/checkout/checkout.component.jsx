@@ -26,9 +26,15 @@ const CheckoutPage = ({cartItems,totalValue}) => (
             </div>
         </div>
         {
+            cartItems.length?
             cartItems.map(cartItem=>
                 <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
                 )
+            :
+            <h1 style={
+                {
+                marginTop:20+'px'}
+            }>The bag feels very light</h1>    
         }
         <div className="total">
             <span>TOTAL : Rs.{totalValue}</span>

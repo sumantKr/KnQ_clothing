@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter,Link} from 'react-router-dom';
 import './menu-items.scss';
 const MenuItems = ({ title, imageUrl, size, linkUrl, history, match }) => (
   <div className={`${size} menu-item`} onClick={() => { history.push(`${match.url}${linkUrl}`) }}>
@@ -9,10 +9,11 @@ const MenuItems = ({ title, imageUrl, size, linkUrl, history, match }) => (
           backgroundImage: `url(${imageUrl})`
         }
       } />
-    <div className="content">
+    <Link to={linkUrl} className="content">
       <h2 className="title">{title.toUpperCase()}</h2>
-      <p className="subtitle">SHOP NOW       </p>
-    </div>
+      <p className="subtitle">SHOP NOW</p>
+      
+    </Link>
   </div>
 )
 
