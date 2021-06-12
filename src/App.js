@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import styled from 'styled-components';
 import { connect } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.action'
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js'
@@ -57,3 +58,8 @@ const mapDispatchToProps = dispatch => ({
   theCurrentUser: user => dispatch(setCurrentUser(user)) //dispatches the action setCurrentUser when the current user called
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+const appStyles=styled.div`
+    
+`
