@@ -21,9 +21,7 @@
             color: black;
             border: 1px solid black;
       }
-
-      
-      &:inverted {
+      &.inverted {
             background-color: white;
             color: black;
             border: 1px solid black;
@@ -32,7 +30,7 @@
                   color: white;
                   border: none;
             }
-      }     
+      }
 }
 .google-sign-in {
       background-color: #4285f4;

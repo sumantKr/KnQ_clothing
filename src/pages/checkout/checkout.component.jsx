@@ -8,7 +8,6 @@ import './checkout.scss'
 
 const CheckoutPage = ({cartItems,totalValue}) => (
     <div className="checkout-page">
-    // {console.log(cartItems)}
         <div className="checkout-header">
             <div className="header-block">
                 <span>Product</span>

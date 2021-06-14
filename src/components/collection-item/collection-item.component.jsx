@@ -13,7 +13,7 @@ const CollectionItem = ({ item,...props}) => (
                 <span className="name">{item.name}</span>
                 <span className="price">Rs.{item.price*10}</span>
             </div>
-            <CustomButton inverted onClick={() => props.addItem(item)}>
+            <CustomButton inverted  onClick={() => props.addItem(item)}>
                 Add To Cart
             </CustomButton>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import styled from 'styled-components';
 import { connect } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.action'
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js'
@@ -59,7 +58,3 @@ const mapDispatchToProps = dispatch => ({
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-
-const appStyles=styled.div`
-    
-`
