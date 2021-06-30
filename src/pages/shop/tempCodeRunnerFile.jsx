@@ -1,6 +1,0 @@
-);
-
-        })
-    }
-    render() {
-        const {match}=this
